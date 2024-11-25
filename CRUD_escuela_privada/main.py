@@ -31,11 +31,25 @@ def ejecutarOpcion(opcion):
         print("[3]. Buscador especifico")
         print("[4]. Volver al menu principal")
         opcion2 = int(input("Seleccione una opción: "))
-        if opcion2 == 1:
-            dni = int(input("Ingrese el DNI: "))
-            buscadorEspecifico.buscarPorDni(dni)
-            
-   
-        
 
+        if opcion2 == 1:
+            comandoSQL = "dni"
+            dni = input("Ingrese el DNI: ")
+            if len(dni) !=8 or not dni.isdigit():
+                while(len(dni) !=8 or not dni.isdigit()):
+                    print("El DNI debe contener 8 digitos.")
+                    dni = input("Ingrese el DNI: ")
+                
+            else:
+                print("Usuario encontrado con exito.")
+                
+            buscadorEspecifico.buscarPorDni(dni, comandoSQL)
+        elif(opcion2 ==2):
+            comandoSQL="nombre"
+            dni = input("Ingrese el Nombre: ")
+            if(dni.isdigit):
+                print("Porfavor solo ingresar caracteres.")
+            else:
+                print("Usuario encontrado.")
+            buscadorEspecifico.buscarPorDni(dni, comandoSQL)
 menuPrincipal()

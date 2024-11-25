@@ -1,19 +1,15 @@
 from BD.conexion import Conexion
 
-def buscarPorDni(dni):
+def buscarPorDni(dni, comandoSQL):
     conexion_instancia = Conexion()  # Crear una instancia de la conexión
     conexion = conexion_instancia.conexionBD() # Obtener la conexión a la base de datos
-
+    
     if conexion is None:
         print("Error: No se pudo establecer conexión con la base de datos.")
         return
     try:
         cursor = conexion.cursor()  # Crear un cursor
-        query = """
-            SELECT legajo, nombre, apellido, email, direccion
-            FROM escuela_privada.alumnos
-            WHERE dni = %s
-        """
+        query = f"SELECT legajo, nombre, apellido, email, direccion FROM escuela_privada.alumnos WHERE {comandoSQL} = %s"
         cursor.execute(query, (dni,))  # Ejecutar la consulta con el parámetro seguro (con tuplas y no como caracteres)
         resultados = cursor.fetchall()  # Obtener todos los registros encontrados tuplas
 
@@ -30,3 +26,8 @@ def buscarPorDni(dni):
     finally:
         cursor.close()  # Cerrar el cursor
         conexion.close()  # Cerrar la conexión
+
+
+
+
+
