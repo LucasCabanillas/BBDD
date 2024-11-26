@@ -63,24 +63,28 @@ def ejecutarOpcion(opcion):
         elif(opcion2 ==3):
             comandoSQL="nombre"
             dato = input("Ingrese el nombre: ")
-            if(dato.isdigit()):
+            while(not dato.isalpha()):
                 print("Porfavor solo ingresar caracteres.")
+                dato = input("Ingrese el nombre: ")
             funciones.buscarEspecifico(dato.title(), comandoSQL)
 
         #Apellido alumno
         elif(opcion2 ==4):
             comandoSQL = "apellido"
             dato= input("Ingresar apellido: ")
-            if(dato.isdigit()):
+            while(not dato.isalpha()):
                 print("Porfavor solo ingresar caracteres.")
+                dato= input("Ingresar apellido: ")
             funciones.buscarEspecifico(dato.title(), comandoSQL)
 
+        #arreglar validacion de no binario y que solo sean esos generos
         #Genero alumno
         if(opcion2 ==5):
             comandoSQL = "genero"
-            dato= input("Ingresar genero (masculino, femenino, etc): ")
-            if(dato.isdigit()):
+            dato= input("Ingresar genero (masculino, femenino, transgero y no binario): ")
+            while(not dato.isalpha()):
                 print("Porfavor solo ingresar caracteres.")
+                dato= input("Ingresar genero (masculino, femenino, transgero y no binario): ")
             funciones.buscarEspecifico(dato.title(), comandoSQL)
     
     #Menu Buscar Profesor
@@ -122,16 +126,18 @@ def ejecutarOpcion(opcion):
         elif(opcion2 == 3):
             comandoSQL = "nombre"
             dato = input("Ingresar nombre: ")
-            if(dato.isdigit()):
+            while(not dato.isalpha()):
                 print("Porfavor solo ingresar caracteres.")
+                dato = input("Ingresar nombre: ")
             funciones.buscarEspecifico(dato.title(), comandoSQL)
 
         #Apellido profesor
         elif(opcion2 == 4):
             comandoSQL = "apellido"
             dato = input("Ingresar apellido")
-            if(dato.isdigit()):
+            while(not dato.isalpha()):
                 print("Porfavor solo ingresar caracteres.")
+                dato = input("Ingresar apellido")
             funciones.buscarEspecifico(dato.title(), comandoSQL)
         
         #Matricula profesor
