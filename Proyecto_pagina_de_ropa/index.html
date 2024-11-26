@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <title>Dress well</title>
+</head>
+<body>
+    <header>
+        <div class="menu-contenedor">
+            <!-- Nombre y logo de la pagina -->
+            <a href="index.html" class="logo">
+                <img src="./templetes/heder-icons/logo-pagina.png" alt="">
+                <h1>Dress well</h1>
+            </a>
+
+            <!-- Menu hamburgesa -->
+            <input type="checkbox" id="menu"/>
+            <label for="menu">
+                <img src="./templetes/heder-icons/icon-burger.png" class="menu-icono" alt="menu">
+            </label>
+
+            <!-- Barra de navegacion -->
+            <nav class="navegacion">
+                <ul>
+                    <li><a href="#">Hombre</a>
+                        <ul>
+                            <li><a href="#">Remeras</a></li>
+                            <li><a href="#">Pantalos</a></li>
+                            <li><a href="#">Buzos</a></li>
+                            <li><a href="#">Camperas</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Niños</a></li>
+                    <li><a href="#">Accesorios</a></li>
+                    <li><a href="#">Sobre nosotros</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </nav>
+
+            <div class="busqueda">
+                <form action="">
+                    <input type="text" placeholder="Buscar"/>
+                    <button type="button"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </form>
+            </div>
+            <!-- Carrito de compras -->
+            <div class="carrito-de-compra">
+                <ul>
+                    <li class="icon-carrito">
+                        <img src="./templetes/heder-icons/icon-miscompras.png" id="img-carrito" alt="carrito">
+                        <div id="carrito">
+                            <table id="lista-carrito">
+                                <thead>
+                                    <tr>
+                                        <th>Imagen</th>
+                                        <th>Nombre</th>
+                                        <th>Precio</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody></tbody>
+                            </table>
+                            <a href="#" id="viciar-carrito" class="btn-1">Vaciar carrito</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+          <div class="contenedor-register-login">
+            <a href="./login.html" class="register-login">
+                <img src="./templetes/heder-icons/icon-persona.png" alt="register-login-icono">
+            </a>
+            <!--
+            <div class="login-index">
+                <form action="">
+                    <input type="email" name="e-mail" required placeholder="Email"/>
+                    <input type="password" name="contraseña" required placeholder="Contraseña"/>
+                    <button type="button">Ingresar</button>
+                </form>
+                <p>No tienes cuenta?</p>
+                <a href="login.html">Registrarse</a>
+            </div>
+            -->
+          </div>
+        </div>
+        <div class="contenedor-imagen-heder">
+            <h2>Super ofertas</h2>
+            <a href="#" class="btn-2">Mas informacion</a>
+
+        </div>
+    </header>
+
+
+
+
+    <script type="text/javascript" src="script.js"></script>
+</body>
+</html>

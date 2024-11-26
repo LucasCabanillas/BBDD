@@ -1,0 +1,232 @@
+body{
+    padding: 0%;
+    margin: 0%;
+}
+header{
+    margin: 0%;
+    padding: 0%;
+}
+header.abajo{
+    background: #BDBDBD;
+    padding: 15px;
+    margin: 30px;
+}
+/*Contenedor del menu*/
+.menu-contenedor{
+    display: flex;
+    justify-content: space-around;
+}
+
+/*Ancla general*/
+a{
+    text-decoration: none;
+}
+/*lista general*/
+ul{
+    list-style: none;
+}
+/*logo dress well*/
+.logo{
+    display: flex;
+    text-decoration: none;
+}
+/*Logo Dress well*/
+.logo img{
+    height: 70px;
+    align-items: center;
+}
+
+/*Titulo Dres well*/
+.logo h1{
+    color: black;
+    text-align: center;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/*Icono hamburgesa*/
+.menu-icono{
+    height: 25px;
+    cursor: pointer;
+    display: none;
+}
+#menu{
+    display: none;
+}
+
+.menu{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/*Menu navegacion*/
+.navegacion{
+    display: flex;
+    justify-content: space-between;
+}
+
+.navegacion ul li{
+    position: relative;
+    float: left;
+}
+
+.navegacion ul li a{
+    font-size: 18px;
+    font-weight:600;
+    margin: 10px;
+    padding: 10px;
+    display:block;
+    color: black;
+}
+.navegacion ul li a:hover{
+    color: #1fe1ff;
+    transition: 0.3s ease;
+}
+/*Submenu*/
+.navegacion ul ul{
+    position: absolute;
+    display: none;
+    text-align: center;
+    background-color: white;
+}
+
+.navegacion ul ul > li{
+    border-bottom: solid 1px;
+}
+
+.navegacion li:hover >ul{
+    display: block;
+}
+
+/*Linea abajo de cada li*/
+.navegacion a::after {
+    content: ''; /* Creamos un pseudo-elemento */
+    position: absolute; /* Lo posicionamos de manera absoluta */
+    left: 0; /* Lo alineamos a la izquierda del enlace */
+    bottom: 0; /* Lo ponemos al final del enlace */
+    width: 100%; /* Lo hacemos tan ancho como el enlace */
+    height: 2px; /* Altura de la línea */
+    background-color: transparent; /* Color de la línea inicialmente transparente */
+    transition: background-color 0.3s ease; /* Transición suave para el color de fondo */
+}
+.navegacion a:hover::after{
+    background-color: black;
+}
+
+/*Carrito de compras*/
+.icon-carrito img{
+    height: 25px;
+}
+
+.carrito-de-compra{
+    display: flex;
+    position: relative;
+    align-items: center;
+    background-color: red;
+}
+
+.carrito-de-compra #carrito{
+    display: none;
+}
+
+.carrito-de-compra:hover #carrito{
+    display: block;
+    position: absolute;
+    right: 0;
+    backdrop-filter: blur(10px);
+    top: 100%;
+    /*para que se coloque primero se muestre primero que toods*/
+    z-index: 1;
+    background-color: #BDBDBD;
+    padding: 10px;
+    min-width: 300px;
+}
+
+table{
+    width: 100%;
+}
+
+th, td{
+    color: white;
+    padding-bottom: 10px;
+}
+
+.btn-1{
+    text-decoration: none;
+    color: white;
+    padding: 11px 25px;
+    background-color: black;
+    border-radius: 5px;
+}
+
+/*Login*/
+.contenedor-register-login{
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+.register-login{
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+.register-login img{
+    height: 21px;
+}
+
+/*Busqueda*/
+.busqueda{
+    display: flex;
+    position: relative;
+    align-items: center;
+}
+.busqueda input{
+    border: 1;
+    padding: 5px;
+    border-color: black;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-right: none;
+}
+.busqueda button{
+    border: 1;
+    padding: 5px 8px;
+    position: absolute;
+    cursor: pointer;
+    background-color: #8AEFFF;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-color: black;
+    border-left: none;
+}
+
+.contenedor-imagen-heder {
+    background-image: url('../templetes/heder-icons/imagen-heder.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 500px;
+}
+
+.contenedor-imagen-heder h2{
+    position: relative;
+    text-align: center;
+    top: 50%;
+    font-size: 50px;
+    filter: drop-shadow(10px 10px 10px );   
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgb(255, 255, 255);
+
+    text-decoration: underline;/*Agragarle linea inferior al texto*/
+    text-decoration-thickness: 2px;/*Tamaño del grosor del subrayado*/
+    text-underline-offset: 11px;/*Sepracion del subrayado y el texto*/
+
+}
+.contenedor-imagen-heder a{
+
+}
